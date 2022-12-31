@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(200, 100%, 85%);
+    color: (200, 100%, 10%);
+    font-family: 'Inter', sans-serif;
+}
+
+.blurred {
+    filter: blur(3px);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.headerLeft {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem;
+    padding: .5rem;
+    border-right: 2px solid blue;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.weather-icon.large {
+    height: 80px;
+    width: 80px;
+}
+
+.headerCurrentTemp {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.headerRight {
+    display: grid;
+    width: 50%;
+    justify-content: space-around;
+    gap: .5rem;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+}
+
+.infoGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .7rem;
+}
+
+.valueSubInfo {
+    font-weight: lighter;
+    font-size: .75rem;
+}
+
+.daySection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 75px);
+    gap: .5rem;
+    justify-content: cetner;
+    padding: 1rem;
+}
+
+.dayCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid hsl(200, 100%, 10%);
+    border-radius: .25rem;
+    padding: .25rem;
+}
+
+.dayCardDay {
+    font-size: .75rem;
+    color: hsl(200,100%, 20%);
+    margin-top: .5rem;
+}
+
+.hourSection {
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+}
+
+.hourRow {
+    background-color: hsl(200, 100%, 75%);
+}
+
+.hourRow:nth-child(2n) {
+    background-color: hsl(200, 60%, 70%);
+}
+
+.hourRow > td {
+    padding: .25rem .5rem;
+
+}
